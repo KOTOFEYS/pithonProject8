@@ -13,15 +13,8 @@ class Product:
 
 class Shop:
 
-    # __file_name = 'products.txt'
-
     def __init__(self):
         self.__file_name = 'products.txt'
-
-
-
-     # def __init__(self, file):
-
 
     def get_products(self):
         file = open(self.__file_name, 'r')
