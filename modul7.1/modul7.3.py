@@ -25,7 +25,6 @@ class WordsFinder:
     def find(self,word):
         word = word.lower()
         other_words = {}
-        # list_words = []
         for name, words in self.get_all_words().items():
             if word in words:
                 other_words[name] = words.index(word)+1
@@ -35,7 +34,6 @@ class WordsFinder:
         word = word.lower()
         other_words = {}
         for name, words in self.get_all_words().items():
-            # list_words.append(words)
             if word in words:
                 other_words[name] = len(word)
                 return other_words
@@ -44,18 +42,3 @@ finder2 = WordsFinder('test_file.txt')
 print(finder2.get_all_words()) # Все слова
 print(finder2.find('TEXT')) # 3 слово по счёту
 print(finder2.count('teXT')) # 4 слова teXT в тексте всего
-# # os.getcwd()
-
-
-# line = '- Мама мыла раму, а Маша помогала. (из прописи 1 класса)'
-# import string
-# string.punctuation
-# # '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
-#
-# # пунктуацию будем удалять в цикле
-# for p in string.punctuation:
-#     if p in line:
-#         # банальная замена символа в строке
-#         line = line.replace(p, '')
-#
-# line.strip()
